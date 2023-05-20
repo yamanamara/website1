@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <title>form </title>
+</head>
+<body>
+    <h3> Step 3 </h3>
+    <h1> si chess </h1>
+    <h1 id="planSelected"></h1>
+    <form id="checkoutForm">
+        <fieldset>
+            <div>
+                <b>Please fill out your billing details: </b> <br> <br>
+                <label for="fname">First Name:</label>
+                <input pattern="[A-Za-z]*" type="text" name="f_name" placeholder="Enter first name" required="required">
+                <label for="lname">Last Name:</label>
+                <input type="text" name="l_name" placeholder="Enter last name" required="required">
+                <br> <br>
+                <b>District and Billing Address: </b> <br> <br>
+                <label for="district"> District:</label>
+                <!-- <input name="district" list="districts" placeholder="Choose a district"> -->
+                <select name="district" id="districts">
+                    <option value="Northern District">Northern District</option>
+                    <option value="Haifa District">Haifa District</option>
+                    <option value="Central District">Central District</option>
+                    <option value="Tel Aviv District">Tel Aviv District</option>
+                    <option value="Southern District">Southern District</option>
+                </select>
+                <label for="address"> Billing Address:</label>
+                <input type="text" name="address" placeholder="Derech Hashalom 32, Dimona" required="required">
+            </div>
+            <br><br>
+            <div>
+                <b>Please enter your phone number: </b> <br> <br>
+                <label for="phone-number">Phone Number:</label>
+                <input type="text" id="phone-number" name="phonenumber" placeholder="000-000-0000" required="required">
+            </div>
+            <br><br>
+            <div>
+                <b>Please fill out your CC details: </b> <br> <br>
+                <label for="ccnum">Credit Card Number: </label>
+                <input type="text" id="ccnum" name="cardnumber" size="16" placeholder="1111-2222-3333-4444"  required="required">
+                <br> <br>
+                <input pattern="[0-9]{3}"type="text" id="cvv" name="cvv" placeholder="CVV" required="required">
+                <br> <br>
+                <label for="expMonth" type="text">Exp Month</label>
+                <!-- <input name="expMonth" list="exp" placeholder="Exp Month" required="required"> -->
+                <select name="expMonth" id="exp" >
+                    <option value="0">01</option>
+                    <option value="1">02</option>
+                    <option value="2">03</option>
+                    <option value="3">04</option>
+                    <option value="4">05</option>
+                    <option value="5">06</option>
+                    <option value="6">07</option>
+                    <option value="7">08</option>
+                    <option value="8">09</option>
+                    <option value="9">10</option>
+                    <option value="10">11</option>
+                    <option value="11">12</option>
+                </select>
+                <label for="expYear" type="text">Exp Year</label>
+                <input name="expYear" placeholder="YY" required="required">
+            </div>
+        </fieldset>
+        <br><br>
+        <br><br>
+        <fieldset>
+            <div>
+                <b> Submit here: </b><br> <br>
+                <input id="submit" type="submit" name="submit" /> 
+            </div>
+        </fieldset>
+    </form>
+    <script type="module" src="./checkout.js"> </script>
+</body>
